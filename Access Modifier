@@ -1,0 +1,44 @@
+public class Student {
+
+    // Public variable - can be accessed from any class
+    public String name = "Man";
+
+    // Private variable - can only be accessed within the Student class
+    private int age = 20;
+
+    // Protected variable - can be accessed within the same package
+    // and by subclasses
+    protected double cgpa = 3.75;
+
+    // Default (package-private) variable - can only be accessed
+    // within the same package
+    String studentClass = "DIT3B";
+
+    // Method to display all student information
+    public void displayStudentInfo() {
+        System.out.println("===== STUDENT INFORMATION =====");
+        System.out.println("Name           : " + name);
+        System.out.println("Age            : " + age);
+        System.out.println("CGPA           : " + cgpa);
+        System.out.println("Student Class  : " + studentClass);
+    }
+
+    // Main method - program execution starts here
+    public static void main(String[] args) {
+
+        // Create a Student object
+        Student student = new Student();
+
+        // Display each variable using the object
+        System.out.println("Public Name        : " + student.name);
+        System.out.println("Private Age        : " + student.age);
+        System.out.println("Protected CGPA     : " + student.cgpa);
+        System.out.println("Default Class      : " + student.studentClass);
+
+        // Print a blank line
+        System.out.println();
+
+        // Call the method to display all student information
+        student.displayStudentInfo();
+    }
+}
